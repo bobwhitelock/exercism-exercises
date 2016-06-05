@@ -1,6 +1,6 @@
 
 pub fn reply(input: &str) -> String {
-    if input == "" {
+    if input.is_empty() {
         "Fine. Be that way!"
     }
     else if is_uppercase(input) {
@@ -19,5 +19,5 @@ fn is_uppercase(input: &str) -> bool {
 }
 
 fn is_question(input: &str) -> bool {
-    input.chars().rev().nth(0).unwrap() == '?'
+    input.ends_with('?')
 }
