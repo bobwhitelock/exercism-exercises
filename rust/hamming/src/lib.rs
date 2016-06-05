@@ -5,6 +5,7 @@ pub fn hamming_distance<'a>(strand: &'a str, other: &'a str) -> Result<u32, &'a 
     }
 
     let distance = strand.chars().zip(other.chars())
-        .fold(0, |acc, (s, o)| if s != o {acc + 1} else {acc + 0});
+        .filter(|&(s, o)| s != o)
+        .count() as u32;
     Ok(distance)
 }
