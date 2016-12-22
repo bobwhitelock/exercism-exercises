@@ -13,10 +13,10 @@ type InputType
 hey : String -> String
 hey input =
     let
-        input_type =
+        inputType =
             classify input
     in
-        response_for input_type
+        responseFor inputType
 
 
 classify : String -> InputType
@@ -34,9 +34,9 @@ classify input =
         Statement
 
 
-response_for : InputType -> String
-response_for input_type =
-    case input_type of
+responseFor : InputType -> String
+responseFor inputType =
+    case inputType of
         Statement ->
             "Whatever."
 
