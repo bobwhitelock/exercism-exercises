@@ -4,11 +4,11 @@ import "strings"
 import "regexp"
 
 func Hey(remark string) string {
-	remark_ := strings.TrimSpace(remark)
-	question := isQuestion(remark_)
-	upper := isUpper(remark_)
+	trimmedRemark := strings.TrimSpace(remark)
+	question := isQuestion(trimmedRemark)
+	upper := isUpper(trimmedRemark)
 
-	if isBlank(remark_) {
+	if isBlank(trimmedRemark) {
 		return "Fine. Be that way!"
 	} else if question && upper {
 		return "Calm down, I know what I'm doing!"
