@@ -31,6 +31,6 @@ func isUpper(str string) bool {
 }
 
 func isQuestion(str string) bool {
-	question_regex := regexp.MustCompile("\\?$")
-	return question_regex.MatchString(str)
+	questionRegex := regexp.MustCompile("\\?$")
+	return questionRegex.MatchString(str)
 }
