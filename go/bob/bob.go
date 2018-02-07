@@ -26,8 +26,8 @@ func isBlank(str string) bool {
 }
 
 func isUpper(str string) bool {
-	is_lower := strings.ToLower(str) == str
-	return !is_lower && strings.ToUpper(str) == str
+	isLower := strings.ToLower(str) == str
+	return !isLower && strings.ToUpper(str) == str
 }
 
 func isQuestion(str string) bool {
