@@ -2,7 +2,7 @@ package space
 
 type Planet string
 
-var secondsInEarthYear = 31557600.0
+const secondsInEarthYear = 31557600.0
 
 var orbitalPeriodsInEarthYears = map[Planet]float64{
 	"Earth":   1,
