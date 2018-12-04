@@ -8,6 +8,6 @@ pub fn is_armstrong_number(num: u32) -> bool {
 fn digits(num: u32) -> Vec<u32> {
     num.to_string()
         .chars()
-        .map(|c| c.to_digit(10).expect("Must be a digit"))
+        .map(|c| c.to_digit(10).unwrap())
         .collect()
 }
