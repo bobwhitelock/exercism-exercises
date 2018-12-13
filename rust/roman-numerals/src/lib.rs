@@ -1,6 +1,6 @@
 use std::fmt::{Display, Formatter, Result};
 
-const UNITS: Symbols = Symbols {
+const UNITS_SYMBOLS: Symbols = Symbols {
     one: "I",
     five: "V",
     ten: "X",
@@ -40,7 +40,7 @@ impl Display for Roman {
         formatted.push_str(&format_digit(self.thousands, THOUSANDS_SYMBOLS));
         formatted.push_str(&format_digit(self.hundreds, HUNDREDS_SYMBOLS));
         formatted.push_str(&format_digit(self.tens, TENS_SYMBOLS));
-        formatted.push_str(&format_digit(self.units, UNITS));
+        formatted.push_str(&format_digit(self.units, UNITS_SYMBOLS));
 
         write!(f, "{}", formatted)
     }
